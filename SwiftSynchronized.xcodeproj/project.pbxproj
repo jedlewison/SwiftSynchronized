@@ -30,7 +30,8 @@
 		8590CDAC1B93B67D00AE74E1 /* SwiftSynchronizedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSynchronizedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8590CDB11B93B67D00AE74E1 /* SwiftSynchronizedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSynchronizedTests.swift; sourceTree = "<group>"; };
 		8590CDB31B93B67D00AE74E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8590CDBC1B93B68F00AE74E1 /* SwiftSynchronized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSynchronized.swift; sourceTree = "<group>"; };
+		8590CDBC1B93B68F00AE74E1 /* SwiftSynchronized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftSynchronized.swift; path = ../SwiftSynchronized.swift; sourceTree = "<group>"; };
+		8590CDBE1B93CA1C00AE74E1 /* SwiftSynchronized.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SwiftSynchronized.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +56,7 @@
 		8590CD981B93B67D00AE74E1 = {
 			isa = PBXGroup;
 			children = (
+				8590CDBE1B93CA1C00AE74E1 /* SwiftSynchronized.podspec */,
 				8590CDA41B93B67D00AE74E1 /* SwiftSynchronized */,
 				8590CDB01B93B67D00AE74E1 /* SwiftSynchronizedTests */,
 				8590CDA31B93B67D00AE74E1 /* Products */,
