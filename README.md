@@ -1,7 +1,6 @@
 # SwiftSynchronized
-@synchronized for Swift, using calls to the Objective-C runtime and providing nearly identical syntax.
 
-SwiftSynchronize provides synchronized, a global public function that takes two arguments:
+SwiftSynchronized provides synchronized, a global public function that serves as a Swift-substitute for Objective-C's @synchronized directive takes two arguments:
 
   - lockToken: An Objective-C object to synchronize on.
   - action: A closure with a generic return type.
