@@ -20,7 +20,7 @@ synchronized returns synchronously. For Void return type, simply don't return an
 
 # Installation
 
-To install via Cocoapods:
+To install via CocoaPods:
 
     pod 'SwiftSynchronized'
     
