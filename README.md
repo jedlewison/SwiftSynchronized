@@ -68,3 +68,7 @@ You can also use Carthage, or simply add SwiftSynchronized.swift directly to you
 
 ### Caution
 Unlike Objective-C's @synchronized, Swift synchronized does not handle exceptions.
+
+### Changes
+1.0.0 -- Added support for autoclosures which allows improved syntax for return values and extension for NSLock and NSRecursiveLock. Also added Carthage support and support for multiple platforms in CocoaPods.
+0.0.1 -- Initial release
