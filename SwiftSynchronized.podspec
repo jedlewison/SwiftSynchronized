@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
     s.name             = "SwiftSynchronized"
-    s.version          = "0.0.1"
-    s.summary          = "Objective-C's @synchronized ... for Swift"
+    s.version          = "1.0.0"
+    s.summary          = "Objective-C's @synchronized for Swift, plus performAndWait for NSLock and NSRecursiveLock"
     s.description      = <<-DESC
-    @synchronized for Swift, using calls to the Objective-C runtime and providing nearly identical syntax.
+    @synchronized for Swift, using calls to the Objective-C runtime and providing nearly identical syntax. Also provides performAndWait extension for NSLock and NSRecursiveLock.
     DESC
     s.homepage         = "https://github.com/jedlewison/SwiftSynchronized"
     s.license          = 'MIT'

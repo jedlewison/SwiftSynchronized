@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		8590CDA61B93B67D00AE74E1 /* SwiftSynchronized.h in Headers */ = {isa = PBXBuildFile; fileRef = 8590CDA51B93B67D00AE74E1 /* SwiftSynchronized.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8590CDAD1B93B67D00AE74E1 /* SwiftSynchronized.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8590CDA21B93B67D00AE74E1 /* SwiftSynchronized.framework */; settings = {ASSET_TAGS = (); }; };
+		8590CDAD1B93B67D00AE74E1 /* SwiftSynchronized.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8590CDA21B93B67D00AE74E1 /* SwiftSynchronized.framework */; };
 		8590CDB21B93B67D00AE74E1 /* SwiftSynchronizedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8590CDB11B93B67D00AE74E1 /* SwiftSynchronizedTests.swift */; };
-		8590CDBD1B93B68F00AE74E1 /* SwiftSynchronized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8590CDBC1B93B68F00AE74E1 /* SwiftSynchronized.swift */; settings = {ASSET_TAGS = (); }; };
+		8590CDBD1B93B68F00AE74E1 /* SwiftSynchronized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8590CDBC1B93B68F00AE74E1 /* SwiftSynchronized.swift */; };
+		85F6599C1C7982E300872C22 /* SwiftSynchronizedAutoClosureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F6599B1C7982E300872C22 /* SwiftSynchronizedAutoClosureTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,8 @@
 		8590CDB31B93B67D00AE74E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8590CDBC1B93B68F00AE74E1 /* SwiftSynchronized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftSynchronized.swift; path = ../SwiftSynchronized.swift; sourceTree = "<group>"; };
 		8590CDBE1B93CA1C00AE74E1 /* SwiftSynchronized.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SwiftSynchronized.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		859120521C799493002B2192 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		85F6599B1C7982E300872C22 /* SwiftSynchronizedAutoClosureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSynchronizedAutoClosureTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 		8590CD981B93B67D00AE74E1 = {
 			isa = PBXGroup;
 			children = (
+				859120521C799493002B2192 /* README.md */,
 				8590CDBE1B93CA1C00AE74E1 /* SwiftSynchronized.podspec */,
 				8590CDA41B93B67D00AE74E1 /* SwiftSynchronized */,
 				8590CDB01B93B67D00AE74E1 /* SwiftSynchronizedTests */,
@@ -86,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				8590CDB11B93B67D00AE74E1 /* SwiftSynchronizedTests.swift */,
+				85F6599B1C7982E300872C22 /* SwiftSynchronizedAutoClosureTests.swift */,
 				8590CDB31B93B67D00AE74E1 /* Info.plist */,
 			);
 			path = SwiftSynchronizedTests;
@@ -207,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85F6599C1C7982E300872C22 /* SwiftSynchronizedAutoClosureTests.swift in Sources */,
 				8590CDB21B93B67D00AE74E1 /* SwiftSynchronizedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

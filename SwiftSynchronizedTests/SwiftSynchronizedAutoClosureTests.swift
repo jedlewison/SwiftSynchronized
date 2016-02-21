@@ -1,15 +1,15 @@
 //
-//  SwiftSynchronizedTests.swift
-//  SwiftSynchronizedTests
+//  SwiftSynchronizedAutoClosureTests.swift
+//  SwiftSynchronized
 //
-//  Created by Jed Lewison on 8/30/15.
-//  Copyright © 2015 Magic App Factory. All rights reserved.
+//  Created by Jed Lewison on 2/20/16.
+//  Copyright © 2016 Magic App Factory. All rights reserved.
 //
 
 import XCTest
 import SwiftSynchronized
 
-class SwiftSynchronizedTests: XCTestCase {
+class SwiftSynchronizedAutoClosureTests: XCTestCase {
 
     var counter = 0
     let blockOpCount = 10000
@@ -48,37 +48,17 @@ class SwiftSynchronizedTests: XCTestCase {
     }
 
 
-    func testWithoutSwiftSynchronized() {
-
-        var blockOps = [NSBlockOperation]()
-
-        for _ in 0...blockOpCount {
-            let blockOperation = NSBlockOperation() {
-                self.performOperation()
-            }
-            blockOps.append(blockOperation)
-        }
-
-        let operationQ = NSOperationQueue()
-
-        operationQ.addOperations(blockOps, waitUntilFinished: true)
-        print(counter)
-        XCTAssert(counter > 0, "Max count is \(counter)")
-    }
-
     // Add synchronized directive to protect block of code.
     // Synchronized should give the operation a chance to decrement
     // the count before another operation increments it.
 
-    func testWithSwiftSynchronizedExample() {
+    func testWithSwiftSynchronizedAutoclosureExample() {
 
         var blockOps = [NSBlockOperation]()
 
         for _ in 0...blockOpCount {
             let blockOperation = NSBlockOperation() {
-                synchronized(self) {
-                    self.performOperation()
-                }
+                synchronized(self, action: self.performOperation())
             }
             blockOps.append(blockOperation)
         }
@@ -92,18 +72,15 @@ class SwiftSynchronizedTests: XCTestCase {
         XCTAssert(counter == 0, "Max count is \(counter)")
     }
 
-    func testtestWithSwiftSynchronizedReturnExample() {
+
+    func testWithSwiftLockExample() {
 
         var blockOps = [NSBlockOperation]()
-
-        var localcounter = 0
+        let lock = NSLock()
 
         for _ in 0...blockOpCount {
             let blockOperation = NSBlockOperation() {
-                localcounter = synchronized(self) {
-                    self.performOperation()
-                    return self.counter
-                }
+                lock.performAndWait { self.performOperation() }
             }
             blockOps.append(blockOperation)
         }
@@ -112,8 +89,73 @@ class SwiftSynchronizedTests: XCTestCase {
 
         operationQ.addOperations(blockOps, waitUntilFinished: true)
 
-        print(localcounter)
+        print(counter)
 
-        XCTAssert(localcounter == 0, "Local max count is \(localcounter)")
-    }    
+        XCTAssert(counter == 0, "Max count is \(counter)")
+    }
+
+    func testWithSwiftRecursiveLockExample() {
+
+        var blockOps = [NSBlockOperation]()
+        let lock = NSRecursiveLock()
+
+        for _ in 0...blockOpCount {
+            let blockOperation = NSBlockOperation() {
+                lock.performAndWait { self.performOperation() }
+            }
+            blockOps.append(blockOperation)
+        }
+
+        let operationQ = NSOperationQueue()
+
+        operationQ.addOperations(blockOps, waitUntilFinished: true)
+
+        print(counter)
+
+        XCTAssert(counter == 0, "Max count is \(counter)")
+    }
+
+
+    func testWithSwiftLockAutoclosureExample() {
+
+        var blockOps = [NSBlockOperation]()
+        let lock = NSLock()
+
+        for _ in 0...blockOpCount {
+            let blockOperation = NSBlockOperation() {
+                lock.performAndWait(self.performOperation())
+            }
+            blockOps.append(blockOperation)
+        }
+
+        let operationQ = NSOperationQueue()
+
+        operationQ.addOperations(blockOps, waitUntilFinished: true)
+
+        print(counter)
+
+        XCTAssert(counter == 0, "Max count is \(counter)")
+    }
+
+    func testWithSwiftRecursiveLockAutoclosureExample() {
+
+        var blockOps = [NSBlockOperation]()
+        let lock = NSRecursiveLock()
+
+        for _ in 0...blockOpCount {
+            let blockOperation = NSBlockOperation() {
+                lock.performAndWait(self.performOperation())
+            }
+            blockOps.append(blockOperation)
+        }
+
+        let operationQ = NSOperationQueue()
+
+        operationQ.addOperations(blockOps, waitUntilFinished: true)
+
+        print(counter)
+
+        XCTAssert(counter == 0, "Max count is \(counter)")
+    }
+    
 }
