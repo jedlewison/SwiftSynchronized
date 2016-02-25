@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = "SwiftSynchronized"
-    s.version          = "1.0.0"
+    s.version          = "1.0.1"
     s.summary          = "Objective-C's @synchronized for Swift, plus performAndWait for NSLock and NSRecursiveLock"
     s.description      = <<-DESC
     @synchronized for Swift, using calls to the Objective-C runtime and providing nearly identical syntax. Also provides performAndWait extension for NSLock and NSRecursiveLock.
@@ -14,5 +14,5 @@ Pod::Spec.new do |s|
     s.tvos.deployment_target = '9.0'
     s.watchos.deployment_target = '2.0'
     s.requires_arc = true
-    s.source_files = 'SwiftSynchronized.swift'
+    s.source_files = 'SwiftSynchronized.{swift,h}'
 end

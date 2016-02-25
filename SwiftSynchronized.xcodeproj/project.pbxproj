@@ -26,7 +26,7 @@
 
 /* Begin PBXFileReference section */
 		8590CDA21B93B67D00AE74E1 /* SwiftSynchronized.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftSynchronized.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8590CDA51B93B67D00AE74E1 /* SwiftSynchronized.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftSynchronized.h; sourceTree = "<group>"; };
+		8590CDA51B93B67D00AE74E1 /* SwiftSynchronized.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SwiftSynchronized.h; path = ../SwiftSynchronized.h; sourceTree = "<group>"; };
 		8590CDA71B93B67D00AE74E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8590CDAC1B93B67D00AE74E1 /* SwiftSynchronizedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSynchronizedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8590CDB11B93B67D00AE74E1 /* SwiftSynchronizedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSynchronizedTests.swift; sourceTree = "<group>"; };
